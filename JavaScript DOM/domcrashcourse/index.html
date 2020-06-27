@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Item Lister</title>
+</head>
+<body>
+  <header id="main-header" class="bg-success text-white p-4 mb-3">
+    <div class="container">
+      <h1 id="header-title">Item Lister <span style="display:none">123</span></h1>
+    </div>
+  </header>
+  <div class="container">
+   <div id="main" class="card card-body">
+    <h2 class="title">Add Items</h2>
+    <form class="form-inline mb-3">
+      <input type="text" class="form-control mr-2">
+      <input type="submit" class="btn btn-dark" value="Submit">
+    </form>
+    <h2 class="title">Items</h2>
+    <ul id="items" class="list-group">
+      <li class="list-group-item">Item 1</li>
+      <li class="list-group-item">Item 2</li>
+      <li class="list-group-item">Item 3</li>
+      <li class="list-group-item">Item 4</li>
+    </ul>
+   </div>
+  </div>
+
+  <script>
+
+    /* ----getElementById---- */
+    // var header = document.getElementById('main-header')
+    // var headerTitle = document.getElementById('header-title')
+    // console.log(headerTitle)
+    // console.log(headerTitle.textContent)
+    // console.log(headerTitle.innerHTML)
+    // console.log(headerTitle.innerText)
+    // headerTitle.innerHTML = '<h2>Minh Thong</h2>'
+    // header.style.borderBottom = 'solid 3px #000'
+
+    /* ----getElementsByClassName---- */
+    // var items = document.getElementsByClassName('list-group-item')
+    // console.log(items)
+    // items[1].textContent = 'Hello 2'
+    // items[1].style.fontWeight = 'bold'
+    // items[1].style.backgroundColor = 'yellow'
+
+    // // items.style.backgroundColor = 'red' // NOK, vi items is array
+
+    // for (let i = 0; i < items.length; i++) {
+    //     items[i].style.backgroundColor = '#f4f4f4'      
+    // }
+
+    /* ----getElementsByClassName---- */
+    // var li = document.getElementsByTagName('li')
+    // console.log(li)
+    // li[1].textContent = 'Hello 2'
+    // li[1].style.fontWeight = 'bold'
+    // li[1].style.backgroundColor = 'yellow'
+
+    // for (let i = 0; i < li.length; i++) {
+    //     li[i].style.backgroundColor = '#f4f4f4'      
+    // }
+
+     /* ----querySelector---- */
+    //  var header = document.querySelector('#main-header')
+    //  header.style.borderBottom = 'solid 4px #ccc'
+
+    //  var input = document.querySelector('input')
+    //  input.value = 'Hello World'
+
+    //  var submit = document.querySelector('input[type="submit"]')
+    //  submit.value = 'Like Selector Css'
+
+    //  var item = document.querySelector('.list-group-item') // tra ve gia tri dau tien
+    //  console.log(item)
+    //  item.style.color = 'red'
+
+    //  var lastItem = document.querySelector('.list-group-item:last-child')
+    //  lastItem.style.color = 'blue'
+
+    //  var secondItem = document.querySelector('.list-group-item:nth-child(2)')
+    //  secondItem.style.color = 'purple'
+
+     /* ----querySelectorAll---- */
+     var titles = document.querySelectorAll('.title')
+     console.log(titles)
+     titles[0].textContent = 'Hello'
+
+     var odd = document.querySelectorAll('li:nth-child(odd)')
+     var even = document.querySelectorAll('li:nth-child(even)')
+     for (let i = 0; i < odd.length; i++) {
+          odd[i].style.backgroundColor = '#f4f4f4'       
+          even[i].style.backgroundColor = '#ccc'       
+     }
+  </script>
+</body>
+</html>
